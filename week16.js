@@ -449,13 +449,17 @@ document.querySelector(".b-22").onclick = function (event) {
 const lastForm = document.forms.lastForm;
 const lastFormButton = lastForm.elements.fourthButton;
 const lastFormCheckbox=lastForm.elements.fourthName;
-lastFormCheckbox.addEventListener(
-  "change",
-  () => {
-    if (!lastFormCheckbox.checked) {lastFormButton.disabled=true}
-    else {lastFormButton.disabled=false}
-  }
-);
+// lastFormCheckbox.addEventListener(
+//   "change",
+//   () => {
+//     if (!lastFormCheckbox.checked) {lastFormButton.disabled=true}
+//     else {lastFormButton.disabled=false}
+//   }
+// );
+lastFormButton.disabled = true;
+lastFormCheckbox.addEventListener("change", () => {
+  lastFormButton.disabled = false;
+});
 
 
 
